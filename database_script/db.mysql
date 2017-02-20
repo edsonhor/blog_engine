@@ -1,0 +1,16 @@
+CREATE USER 'applicaion'@'localhost' IDENTIFIED BY 'password';
+CREATE DATABASE IF NOT EXISTS blogengine;
+GRANT SELECT, INSERT, DELETE, UPDATE, CREATE TEMPORARY TABLES, EXECUTE ON blogengine.* TO 'applicaion'@'localhost';
+use blogengine;
+
+
+CREATE TABLE subscribers
+(
+subscriberid int  NOT NULL AUTO_INCREMENT,
+firstname varchar(255),
+lastname varchar(255),
+emailaddress varchar(255),
+signupdate varchar(255),
+emailverified varchar(255),
+PRIMARY KEY (subscriberid)
+);
